@@ -59,11 +59,15 @@ li:hover {
 
 li img.car-pic {
     width: auto;
-    height: 7rem;
+    height: 10rem;
 }
 
-li div.car-attr{
+div.car-attr {
     width: 20rem;
     margin: 0 1em;
     overflow: auto;
+}
+
+p.total-price {
+    font-size: 18px;
 }
