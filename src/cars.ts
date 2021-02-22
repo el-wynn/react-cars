@@ -11,13 +11,18 @@ export interface ICars {
     availability: { maxDuration: number, maxDistance: number };
 }
 
-export const getCars = () => {
+export const getCars = (duration_param: string, distance_param: string) => {
     const [cars,setCars] = useState([]);
     const [error, setError] = useState('');
 
+    const params = {
+        duration : parseInt(duration_param) | 0,
+        distance : parseInt(distance_param) | 0
+      };
+
     useEffect(() => {
     axios
-        .get<ICars[]>('./cars.json')
+        .get<ICars[]>('./cars.json', {params})
         .then(response => {
             setCars(response.data);
             console.log(response.data[0])

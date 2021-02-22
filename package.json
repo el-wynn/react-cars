@@ -13,13 +13,16 @@
     "@types/styled-components": "^5.1.7",
     "axios": "^0.21.1",
     "express": "^4.17.1",
-    "react": "^16.11.0",
-    "react-devtools": "^4.10.1",
-    "react-dom": "^16.11.0",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1"
   },
+   "alias": {
+    "react": "./node_modules/react",
+    "react-dom": "./node_modules/react-dom"
+  },
   "devDependencies": {
+    "@types/react": "^16.11.0",
+    "@types/react-dom": "^16.11.0",
     "parcel-bundler": "^1.12.4",
     "typescript": "^3.6.4"
   }
