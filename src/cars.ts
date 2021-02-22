@@ -24,6 +24,7 @@ export const getCars = () => {
         })
         .catch(ex => {
             setError(ex.response);
+            console.log(error);
         })
     }, []);
 

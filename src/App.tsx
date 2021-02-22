@@ -7,17 +7,18 @@ const App: React.FC = () => {
   if (data.length ==0) return null;
   
   return(
-  <div>
-    <h1>Hello!</h1>
     <div>
+    <div className='header'>Cars</div>
+    <div className='main'>
       <ul className='cars'>
         {data.map( (car) => (
           <li key={car.id}>
-            <p>Brand : {car.brand}</p>
-            <p>Model : {car.model}</p>
-            <p>Price/day : {car.pricePerDay}</p>
-            <p>Price/km : {car.pricePerKm}</p>
-            <p>Brand : {car.brand}</p>
+            <img className='car-pic' src={car.picturePath} alt='Car picture'/>
+            <div className='car-attr'>
+              <p><b>{car.brand} </b>{car.model}</p>
+              <p>Price/day : {car.pricePerDay/100}</p>
+              <p>Price/km : {car.pricePerKm/100}</p>
+            </div>
           </li>
         ))}
       </ul>
